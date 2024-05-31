@@ -3,16 +3,16 @@ import Input from './Input';
 import Modal from './Modal';
 import MessageBlock from './MessageBlock.jsx';
 
-const NewProject = ({ onAddProject }) => {
+const NewProject = ({ onAddProject, onCancel }) => {
 	const modal = useRef();
 	const title = useRef();
 	const description = useRef();
 	const dueDate = useRef();
 
 	const handleSave = () => {
-		const enteredTitle = title.current.value || '';
-		const enteredDescription = description.current.value || '';
-		const enteredDueDate = dueDate.current.value || '';
+		const enteredTitle = title.current.value;
+		const enteredDescription = description.current.value;
+		const enteredDueDate = dueDate.current.value;
 
 		if (!validateNewProject({ enteredTitle, enteredDescription, enteredDueDate })) {
 			return;
@@ -28,8 +28,10 @@ const NewProject = ({ onAddProject }) => {
 	const validateNewProject = (projectData) => {
 		if (projectData.enteredTitle.trim() === '' || projectData.enteredDescription.trim() === '' || projectData.enteredDueDate.trim() === '') {
 			modal.current.open();
-			return;
+			return false;
 		}
+
+		return true;
 	};
 
 	return (
@@ -48,7 +50,13 @@ const NewProject = ({ onAddProject }) => {
 				</div>
 				<menu className='flex items-center justify-end gap-4 my-4'>
 					<li>
-						<button className='text-stone-800 hover:text-stone-950'>Cancel</button>
+						<button
+							className='text-stone-800 hover:text-stone-950'
+							onClick={() => {
+								onCancel(undefined);
+							}}>
+							Cancel
+						</button>
 					</li>
 					<li>
 						<button className='px-6 py-2 rounded-md bg-stone-800 text-stone-50 hover:bg-stone-950' onClick={handleSave}>
