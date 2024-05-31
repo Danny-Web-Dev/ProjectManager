@@ -25,7 +25,7 @@ const NewProject = ({ onAddProject }) => {
 			<div>
 				<Input ref={title} labelContent='Title' />
 				<Input ref={description} textarea labelContent='Description' />
-				<Input ref={dueDate} labelContent='Due Date' />
+				<Input type='date' ref={dueDate} labelContent='Due Date' />
 			</div>
 			<menu className='flex items-center justify-end gap-4 my-4'>
 				<li>
