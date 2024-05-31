@@ -35,7 +35,7 @@ function App() {
 
 	let content;
 	if (projectsState.selectedProjectId === null) {
-		content = <NewProject onCancel={handleSelectedProject} onAddProject={handleAddProject} />;
+		content = <NewProject onCancel={handleSelectedProject} onAdd={handleAddProject} />;
 	} else if (projectsState.selectedProjectId === undefined) {
 		content = <NoProjectSelected onStartAddProject={handleSelectedProject} />;
 	}

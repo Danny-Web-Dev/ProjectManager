@@ -3,7 +3,7 @@ import Input from './Input';
 import Modal from './Modal';
 import MessageBlock from './MessageBlock.jsx';
 
-const NewProject = ({ onAddProject, onCancel }) => {
+const NewProject = ({ onAdd, onCancel }) => {
 	const modal = useRef();
 	const title = useRef();
 	const description = useRef();
@@ -18,7 +18,7 @@ const NewProject = ({ onAddProject, onCancel }) => {
 			return;
 		}
 
-		onAddProject({
+		onAdd({
 			title: enteredTitle,
 			description: enteredDescription,
 			dueDate: enteredDueDate,
