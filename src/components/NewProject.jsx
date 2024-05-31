@@ -23,7 +23,7 @@ const NewProject = ({ onAddProject }) => {
 	return (
 		<div className='w-[35rem] mt-16'>
 			<div>
-				<Input ref={title} labelContent='Title' />
+				<Input type='text' ref={title} labelContent='Title' />
 				<Input ref={description} textarea labelContent='Description' />
 				<Input type='date' ref={dueDate} labelContent='Due Date' />
 			</div>
