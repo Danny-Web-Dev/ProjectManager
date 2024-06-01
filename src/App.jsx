@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import NewProject from './components/NewProject';
-import NoProjectSelected from './components/NoProjectSelected';
-import ProjectsSideBar from './components/ProjectsSideBar';
-import SelectedProject from './components/SelectedProject';
+import NewProject from './components/Project/NewProject';
+import NoProjectSelected from './components/Project/NoProjectSelected';
+import SideBar from './components/SideBar';
+import SelectedProject from './components/Project/SelectedProject';
 
 function App() {
 	const [projectsState, setProjectsState] = useState({
@@ -89,7 +89,7 @@ function App() {
 	return (
 		<>
 			<main className='h-screen my-8 flex gap-8 '>
-				<ProjectsSideBar
+				<SideBar
 					onSelectProject={handleSelectedProject}
 					onStartAddProject={handleSelectedProject}
 					projects={projectsState.projects}

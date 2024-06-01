@@ -1,7 +1,7 @@
 import React from 'react';
 import noProjectImage from '../assets/no-projects.png';
-import Button from './Button.jsx';
-import MessageBlock from './MessageBlock.jsx';
+import Button from '../Utils/Button.jsx';
+import MessageBlock from '../Utils/MessageBlock.jsx';
 
 const NoProjectSelected = ({ onStartAddProject }) => {
 	return (

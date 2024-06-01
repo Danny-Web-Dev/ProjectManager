@@ -1,4 +1,4 @@
-import Tasks from './Tasks.jsx';
+import Tasks from '../Tasks/Tasks.jsx';
 
 const SelectedProject = ({ project, onDelete, onAddTask, onDeleteTask, tasks }) => {
 	const formattedDate = new Date(project.dueDate).toLocaleDateString('en-US', {

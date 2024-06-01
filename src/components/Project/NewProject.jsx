@@ -1,7 +1,7 @@
 import { useRef } from 'react';
-import Input from './Input';
-import Modal from './Modal';
-import MessageBlock from './MessageBlock.jsx';
+import Input from '../Utils/Input.jsx';
+import Modal from '../Utils/Modal.jsx';
+import MessageBlock from '../Utils/MessageBlock.jsx';
 
 const NewProject = ({ onAdd, onCancel }) => {
 	const modal = useRef();
