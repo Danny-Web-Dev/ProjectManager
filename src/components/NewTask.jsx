@@ -19,7 +19,7 @@ const NewTask = ({ onAdd }) => {
 	};
 
 	const isTaskValid = () => {
-		return enteredTask.length > 0;
+		return enteredTask.trim() === '';
 	};
 
 	let inputClasses = 'w-64 px-2 py-1 rounded-sm bg-stone-200';
